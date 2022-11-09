@@ -16,8 +16,8 @@ export default function ButtonDisplay() {
     };
     return (
         <>
-            <h1>Hello World</h1>
-            <h4 className='text-center'>Count: {count}</h4>
+            <h1>Kekamba Nation</h1>
+            
             {buttons.map((button, idx) => <Button color={button.color} step={button.step} key={idx} handleClick={handleClick}/>)}
         </>
                 

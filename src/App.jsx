@@ -1,27 +1,25 @@
 import { useState } from 'react';
 import ButtonDisplay from './components/ButtonDisplay';
 import Navbar from "./components/Navbar";
-import RacerClassDisplay from './components/RacerClassDisplay';
-import RacerDisplay from './components/RacerDisplay';
+import StudentClassDisplay from './components/StudentClassDisplay';
+//import StudentDisplay from './components/StudentDisplay';
 
 
 function App() {
-    const [myName, setMyName] = useState('Brian');
-    const [myCity, setMyCity ]= useState('Chicago');
+    const [myName, setMyName] = useState('');
 
-    function updateUserInfo(userName, userHometown){
+    function updateUserInfo(userName){
         setMyName(userName);
-        setMyCity(userHometown);
     };
 
     return (
         <>
-            <Navbar name={myName} city={myCity} updateUserInfo={updateUserInfo}/>
-            <div className="container">
-                <ButtonDisplay />
-                {/* <RacerDisplay /> */}
-                <RacerClassDisplay />
-            </div>
+            <Navbar name={myName} updateUserInfo={updateUserInfo}/>
+                <div className="container">
+                    <ButtonDisplay />
+                    {/* <StudentDisplay /> */}
+                    <StudentClassDisplay />
+                </div>
         </>
     )
 }
